@@ -1,0 +1,39 @@
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+
+page.includeJSFooter {
+  # cgbTeaserJs = EXT:cgb_teaser/Resources/Public/Scripts/cgb_teaser.js
+  # cgbTeaserJs.forceOnTop = 0
+}
+
+page.includeCSS {
+   cgbTeaserCss = EXT:cgb_teaser/Resources/Public/Styles/cgb_teaser.css
+   cgbTeaserLess = EXT:cgb_teaser/Resources/Public/Less/cgb_teaser.less
+}
+
+
+tt_content {
+  tx_cgbteaser_teaser = FLUIDTEMPLATE
+  tx_cgbteaser_teaser {
+    templateName = Teaser
+
+    dataProcessing {
+      1 = CGB\CgbTeaser\DataProcessing\TeaserProcessor
+      1 {
+        useHere = theConfigurationOfTheDataProcessor
+      }
+    }
+
+    templateRootPaths {
+      0 = EXT:cgb_teaser/Resources/Private/Templates/ContentElements/
+    }
+
+    partialRootPaths {
+      0 = EXT:cgb_teaser/Resources/Private/Partials/ContentElements/
+    }
+
+    layoutRootPaths {
+      0 = EXT:cgb_teaser/Resources/Private/Layout/ContentElements/
+    }
+  }
+}
+

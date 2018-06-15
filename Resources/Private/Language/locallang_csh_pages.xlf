@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-29T18:31:42Z" product-name="cgb_teaser">
+		<header/>
+		<body>
+			<trans-unit id="teaserimage.description">
+				<source>Teaser Image</source>
+			</trans-unit>
+			<trans-unit id="teasertext.description">
+				<source>Teaser Text</source>
+			</trans-unit>
+			<trans-unit id="textonly.description">
+				<source>Text Only</source>
+			</trans-unit>
+			<trans-unit id="teasertype.description">
+				<source>Teaser Type</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-29T18:31:42Z" product-name="cgb_teaser">
+		<header/>
+		<body>
+			<trans-unit id="tx_cgbcontent">
+				<source>CGB Content Elements</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_page">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_page.teaserimage">
+				<source>Teaserimage</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_page.teasertext">
+				<source>Teasertext</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_page.textonly">
+				<source>Textonly</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_page.teasertype">
+				<source>Teasertype</source>
+			</trans-unit>
+
+			<trans-unit id="tx_cgbteaser_domain_model_page.teasertype.1">
+				<source>Movie</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_page.teasertype.2">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_page.teasertype.3">
+				<source>PDF</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_page.teasertype.4">
+				<source>Text</source>
+			</trans-unit>
+            <trans-unit id="pages.tx_extbase_type.Tx_CgbTeaser_Page">
+				<source>CGB Teaser Page</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_content">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_content.showpage">
+				<source>Showpage</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_content.mode">
+				<source>Mode</source>
+			</trans-unit>
+			<trans-unit id="tt_content.cgb_teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tt_content.palette.override">
+				<source>Override Image and Text</source>
+			</trans-unit>
+			<trans-unit id="tt_content.palette.mode">
+				<source>Teaser Mode</source>
+			</trans-unit>
+
+
+        </body>
+	</file>
+</xliff>

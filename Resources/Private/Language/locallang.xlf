@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-29T18:31:42Z" product-name="cgb_teaser">
+		<header/>
+		<body>
+			<trans-unit id="tx_cgbteaser_domain_model_page">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_page.teaserimage">
+				<source>Teaserimage</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_page.teasertext">
+				<source>Teasertext</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_page.textonly">
+				<source>Textonly</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_page.teasertype">
+				<source>Teasertype</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_content.showpage">
+				<source>Showpage</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_content.mode">
+				<source>Mode</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

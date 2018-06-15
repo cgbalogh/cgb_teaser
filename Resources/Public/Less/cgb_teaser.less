@@ -1,0 +1,86 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06.06.2018, 18:00:41
+    Author     : cbalogh
+*/
+
+@cgb_teaser-bg_color: #cccccc;
+
+
+.cgb_teaser-wrap * {
+  font-size: 95%;
+  line-height: normal;
+}
+
+.cgb_teaser-teaser {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+}
+
+.cgb_teaser-innerwrap {
+  position: relative;
+  margin: 0 1em 1em 0;
+  height: 6em;
+  overflow: hidden;
+  background-color: @cgb_teaser-bg_color;
+  padding: .5em .5em 0 .5em;
+}
+
+.cgb_teaser-innerwrap img {
+  float: left;
+  height: 50%;
+  width: auto;
+  align: left;
+}
+
+.col-md-4 .cgb_teaser-teaser,
+.col-md-8 .cgb_teaser-teaser {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .cgb_teaser-teaser {
+    width: 50%;
+  }
+  
+.col-md-8 .cgb_teaser-teaser {
+  width: 50%;
+}
+  
+}
+
+@media only screen and (min-width: 960px) {
+  .cgb_teaser-teaser {
+    width: 33.33%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .cgb_teaser-teaser {
+    width: 25%;
+  }
+}
+
+.cgb_teaser-innerwrap .cgb_teaser-fader {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+
+
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, @cgb_teaser-bg_color 80%, @cgb_teaser-bg_color 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,@cgb_teaser-bg_color 80%,@cgb_teaser-bg_color 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,@cgb_teaser-bg_color 80%,@cgb_teaser-bg_color 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+  
+}
+
+.cgb_teaser-innerwrap:hover {
+  background-color: lighten(@cgb_teaser-bg_color, 15%); 
+}

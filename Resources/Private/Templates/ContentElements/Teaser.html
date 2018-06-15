@@ -1,0 +1,22 @@
+
+
+<div class="cgb_teaser-wrap">
+  <f:for each="{pages}" as="page">
+    <div class="cgb_teaser-teaser">
+      <f:link.page pageUid="{page.page.uid}" linkAccessRestrictedPages="true">
+        <div class="cgb_teaser-innerwrap">
+          <f:image src="EXT:cgb_teaser/Resources/Public/Icons/movie.png" />
+          <f:format.stripTags>{page.ce.bodytext}</f:format.stripTags>
+          <div class="cgb_teaser-fader"></div>
+        </div>
+      </f:link.page>
+      
+    </div>
+    <!-- {page.page.tx_cgbteaser_teasertype}
+    <f:image src="EXT:cgb_teaser/Resources/Public/Icons/movie.png" />
+    -->
+  </f:for>
+  <div style="clear: both"></div>
+</div>
+
+
