@@ -8,7 +8,14 @@ and open the template in the editor.
     Author     : cbalogh
 */
 
-@cgb_teaser-bg_color: #cccccc;
+@cgb_teaser-bg: #dedeee;
+
+@cgb_teaser-height: 6em;
+@cgb_teaser-spacing: 1em;
+
+
+@cgb_teaser-bg_color: @cgb_teaser-bg;
+@cgb_teaser-bg_color_hover: darken(@cgb_teaser-bg_color, 10%); 
 
 
 .cgb_teaser-wrap * {
@@ -16,27 +23,49 @@ and open the template in the editor.
   line-height: normal;
 }
 
-.cgb_teaser-teaser {
+.cgb_teaser-wrap.cgb_teaser-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
+
+.cgb_teaser-teaser.cgb_teaser-float {
   /* border: 1px solid red; */
   box-sizing: border-box;
   width: 100%;
   float: left;
 }
 
-.cgb_teaser-innerwrap {
+.cgb_teaser-innerwrap.cgb_teaser-float {
   position: relative;
-  margin: 0 1em 1em 0;
-  height: 6em;
+  margin: 0 @cgb_teaser-spacing @cgb_teaser-spacing 0;
+  height: @cgb_teaser-height;
   overflow: hidden;
   background-color: @cgb_teaser-bg_color;
   padding: .5em .5em 0 .5em;
 }
 
+.cgb_teaser-innerwrap.cgb_teaser-flex {
+  position: relative;
+  height: @cgb_teaser-height;
+  overflow: hidden;
+  background-color: @cgb_teaser-bg_color;
+  padding: .5em .5em 0 .5em;
+  margin-bottom: 1em;
+}
+  
+.cgb_teaser-innerwrap.cgb_teaser-extend {
+    height: 2 * @cgb_teaser-height + @cgb_teaser-spacing;
+}
+
 .cgb_teaser-innerwrap img {
   float: left;
-  height: 50%;
   width: auto;
-  align: left;
+  height: auto;
+  max-width: 30%;
+  
+  padding-right: .5em;
+  
 }
 
 .col-md-4 .cgb_teaser-teaser,
@@ -62,8 +91,11 @@ and open the template in the editor.
 }
 
 @media only screen and (min-width: 1600px) {
-  .cgb_teaser-teaser {
+  .cgb_teaser-teaser.cgb_teaser-float {
     width: 25%;
+  }
+  .cgb_teaser-teaser.cgb_teaser-flex {
+    width: 24%;
   }
 }
 
@@ -82,5 +114,14 @@ and open the template in the editor.
 }
 
 .cgb_teaser-innerwrap:hover {
-  background-color: lighten(@cgb_teaser-bg_color, 15%); 
+  background-color: @cgb_teaser-bg_color_hover; 
+  
+  .cgb_teaser-fader {
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, @cgb_teaser-bg_color_hover 80%, @cgb_teaser-bg_color_hover 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,@cgb_teaser-bg_color_hover 80%,@cgb_teaser-bg_color_hover 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,@cgb_teaser-bg_color_hover 80%,@cgb_teaser-bg_color_hover 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+  }
 }
+
+

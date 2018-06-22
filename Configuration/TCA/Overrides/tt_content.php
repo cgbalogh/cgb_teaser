@@ -52,7 +52,7 @@ $tmp_cgb_teaser_columns = [
     ],
     'tx_cgbteaser_mode' => [
         'exclude' => true,
-        'label' => 'LLL:EXT:cgb_teaser/Resources/Private/Language/locallang_db.xlf:tx_cgbteaser_domain_model_content.tx_cgbteaser_mode',
+        'label' => 'LLL:EXT:cgb_teaser/Resources/Private/Language/locallang_db.xlf:tx_cgbteaser_domain_model_content.mode',
         'config' => [
             'type' => 'select',
             'renderType' => 'selectSingle',
@@ -63,6 +63,36 @@ $tmp_cgb_teaser_columns = [
             'maxitems' => 1,
             'eval' => ''
         ],
+    ],
+    'tx_cgbteaser_height' => [
+        'exclude' => true,
+        'label' => 'LLL:EXT:cgb_teaser/Resources/Private/Language/locallang_db.xlf:tx_cgbteaser_domain_model_content.height',
+        'config' => [
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => [
+                ['-- Select --', 0],
+                ['Normal', 1],
+                ['Extend first', 2],
+                ['Extend all', 3],
+            ],
+            'size' => 1,
+            'maxitems' => 1,
+            'eval' => ''
+        ],
+    ],
+    'tx_cgbteaser_flex' => [
+        'exclude' => true,
+        'label' => 'LLL:EXT:cgb_teaser/Resources/Private/Language/locallang_db.xlf:tx_cgbteaser_domain_model_content.flex',
+        'config' => [
+            'type' => 'check',
+            'items' => [
+                '1' => [
+                    '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
+                ]
+            ],
+            'default' => 0,
+        ]
     ],
 
 ];
@@ -113,7 +143,7 @@ $GLOBALS['TCA']['tt_content']['types']['tx_cgbteaser_teaser'] = array_replace_re
 );
 
 $GLOBALS['TCA']['tt_content']['types']['tx_cgbteaser_teaser']['showitem'] .= ',--div--;LLL:EXT:cgb_teaser/Resources/Private/Language/locallang_db.xlf:tx_cgbteaser_domain_model_content,';
-$GLOBALS['TCA']['tt_content']['types']['tx_cgbteaser_teaser']['showitem'] .= 'tx_cgbteaser_showpage, tx_cgbteaser_mode';
+$GLOBALS['TCA']['tt_content']['types']['tx_cgbteaser_teaser']['showitem'] .= 'tx_cgbteaser_showpage, tx_cgbteaser_mode, tx_cgbteaser_height, tx_cgbteaser_flex';
 
 
 if (array_search(

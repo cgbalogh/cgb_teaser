@@ -1,0 +1,9 @@
+
+plugin.cgb_teaser {
+    settings {
+        less {
+            # cat=cgb_teaser//a; type=string; label=Background color for teaser.
+            cgb_teaser-bg = #dedeff;
+        }
+    }
+}

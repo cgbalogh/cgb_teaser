@@ -17,10 +17,7 @@ tt_content {
     templateName = Teaser
 
     dataProcessing {
-      1 = CGB\CgbTeaser\DataProcessing\TeaserProcessor
-      1 {
-        useHere = theConfigurationOfTheDataProcessor
-      }
+      10 = CGB\CgbTeaser\DataProcessing\TeaserProcessor
     }
 
     templateRootPaths {

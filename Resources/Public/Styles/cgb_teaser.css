@@ -8,6 +8,6 @@ and open the template in the editor.
     Author     : cbalogh
 */
 
-.cgb_teaser-wrap {
+.cgb_teaser-wrap.cgb_teaser-float {
   width: calc(100% + 1em);
 }

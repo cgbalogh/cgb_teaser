@@ -17,5 +17,7 @@ CREATE TABLE tt_content (
 
 	tx_cgbteaser_showpage text,
 	tx_cgbteaser_mode int(11) DEFAULT '0' NOT NULL,
+        tx_cgbteaser_height tinyint(4) DEFAULT '0' NOT NULL,
+        tx_cgbteaser_flex tinyint(1) DEFAULT '0' NOT NULL,
 
 );

@@ -34,7 +34,7 @@
 			<trans-unit id="tx_cgbteaser_domain_model_page.teasertype.4">
 				<source>Text</source>
 			</trans-unit>
-            <trans-unit id="pages.tx_extbase_type.Tx_CgbTeaser_Page">
+                        <trans-unit id="pages.tx_extbase_type.Tx_CgbTeaser_Page">
 				<source>CGB Teaser Page</source>
 			</trans-unit>
 			<trans-unit id="tx_cgbteaser_domain_model_content">
@@ -45,6 +45,12 @@
 			</trans-unit>
 			<trans-unit id="tx_cgbteaser_domain_model_content.mode">
 				<source>Mode</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_content.height">
+				<source>Height</source>
+			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_content.flex">
+				<source>Flex</source>
 			</trans-unit>
 			<trans-unit id="tt_content.cgb_teaser">
 				<source>Teaser</source>
