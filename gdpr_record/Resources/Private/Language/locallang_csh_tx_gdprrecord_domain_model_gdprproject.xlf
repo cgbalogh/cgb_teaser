@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-29T14:33:29Z" product-name="gdpr_record">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="controller.description">
+				<source>Conttroller</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

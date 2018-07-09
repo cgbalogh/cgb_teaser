@@ -5,10 +5,20 @@
   </f:if>
 </f:variable>
 
+<f:variable name="additionalStyle">
+  <f:if condition="{settings.width} > 0">
+    <f:then>width: {settings.width}%;</f:then>
+    <f:else></f:else>  
+  </f:if>
+</f:variable>
+
 <div class="cgb_teaser-wrap {teaserClass}">
   <f:for each="{pages}" as="page" iteration="iterator">
-    <div class="cgb_teaser-teaser {teaserClass}">
-      <f:link.page pageUid="{page.uid}" linkAccessRestrictedPages="true">
+    
+    <f:variable name="targetPageLink"><f:uri.page pageUid="{page.uid}" /></f:variable>
+    
+    <div class="cgb_teaser-teaser {teaserClass}" style="{additionalStyle}">
+      <f:link.page pageUid="{page.uid}">
         <f:variable name="additionalClass">
           <f:if condition="{iterator.isFirst} && ({settings.height} == 2)">
             <f:then>cgb_teaser-extend</f:then>
@@ -16,12 +26,51 @@
             <f:else>cgb_teaser-normal</f:else>
           </f:if>
         </f:variable>
-
+        
         <div class="cgb_teaser-teaser_{iterator.index}">
           <div class="cgb_teaser-innerwrap {teaserClass} {additionalClass}">
-            <f:image src="{page.image.uid}" treatIdAsReference="1" />
-            <f:format.stripTags>{page.teasertext}</f:format.stripTags>                  
-            <div class="cgb_teaser-fader"></div>
+            
+            <f:if condition="{page.image.uid} > 0">
+              <f:then>
+                <div class="cgb_teaser-imagewrap">
+                  <f:image src="{page.image.uid}" treatIdAsReference="1" class="cgb_teaser-image" />
+                </div>
+
+                <div class="cgb_teaser-textwrap">
+                  <f:if condition="{page.header}">
+                    <h4 class="cgb_teaser-title">{page.header}</h4>
+                  </f:if>
+
+                  <p class="cgb_teaser-bodytext">
+                    <f:format.stripTags>{page.teasertext}</f:format.stripTags>
+                  </p>
+                  
+                  <div class="cgb_teaser-fader"></div>
+
+                </div>
+              </f:then>
+              <f:else>
+                <div class="cgb_teaser-textwrap" style="width: 100%;">
+                  <f:if condition="{page.header}">
+                    <h4 class="cgb_teaser-title">{page.header}</h4>
+                  </f:if>
+
+                  <p class="cgb_teaser-bodytext">
+                    <f:format.stripTags>{page.teasertext}</f:format.stripTags>
+                  </p>
+                  <div class="cgb_teaser-fader"></div>
+                </div>
+              </f:else>
+            </f:if>
+
+            <f:if condition="{targetPageLink} == ''">
+              <f:image src="EXT:cgb_teaser/Resources/Public/Icons/page_lock.png" class="cgb_teaser-pagelock" />
+            </f:if>
+
+            <f:if condition="1">
+              <f:image src="EXT:cgb_teaser/Resources/Public/Icons/video.png" class="cgb_teaser-type" />
+            </f:if>
+            
           </div>
         </div>
       </f:link.page>

@@ -11,3 +11,18 @@ and open the template in the editor.
 .cgb_teaser-wrap.cgb_teaser-float {
   width: calc(100% + 1em);
 }
+
+.cgb_teaser-pagelock {
+  position: absolute;
+  height: 2.5em;
+  width: auto;
+  bottom: 0;  
+}
+
+.cgb_teaser-type {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 2.5em;
+  width: auto;
+}

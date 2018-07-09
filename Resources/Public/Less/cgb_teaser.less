@@ -8,19 +8,30 @@ and open the template in the editor.
     Author     : cbalogh
 */
 
-@cgb_teaser-bg: #dedeee;
+@cgb_teaser-bg: #ffffff;
 
-@cgb_teaser-height: 6em;
+@cgb_teaser-height: 10em;
 @cgb_teaser-spacing: 1em;
 
 
 @cgb_teaser-bg_color: @cgb_teaser-bg;
-@cgb_teaser-bg_color_hover: darken(@cgb_teaser-bg_color, 10%); 
+@cgb_teaser-bg_color_hover: #dfedff; 
 
 
 .cgb_teaser-wrap * {
-  font-size: 95%;
+  font-size: 12px;
   line-height: normal;
+}
+
+.cgb_teaser-wrap h4 {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+  
+.cgb_teaser-innerwrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between; 
 }
 
 .cgb_teaser-wrap.cgb_teaser-flex {
@@ -42,7 +53,8 @@ and open the template in the editor.
   height: @cgb_teaser-height;
   overflow: hidden;
   background-color: @cgb_teaser-bg_color;
-  padding: .5em .5em 0 .5em;
+  /* padding: .5em .5em 0 .5em; */
+  border: 1px solid #cbcbef;
 }
 
 .cgb_teaser-innerwrap.cgb_teaser-flex {
@@ -52,20 +64,33 @@ and open the template in the editor.
   background-color: @cgb_teaser-bg_color;
   padding: .5em .5em 0 .5em;
   margin-bottom: 1em;
+  border: 1px solid #cbcbcb;
 }
   
 .cgb_teaser-innerwrap.cgb_teaser-extend {
     height: 2 * @cgb_teaser-height + @cgb_teaser-spacing;
 }
 
-.cgb_teaser-innerwrap img {
-  float: left;
-  width: auto;
+.cgb_teaser-innerwrap .cgb_teaser-imagewrap {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.cgb_teaser-innerwrap.cgb_teaser-extend {
+  display: block;
+}
+
+.cgb_teaser-innerwrap.cgb_teaser-extend .cgb_teaser-imagewrap {
+  width: 100%;
+  height: 60%;
+}
+
+.cgb_teaser-innerwrap .cgb_teaser-imagewrap .cgb_teaser-image {
+  width: 100%;
   height: auto;
-  max-width: 30%;
-  
-  padding-right: .5em;
-  
+  position: absolute;
 }
 
 .col-md-4 .cgb_teaser-teaser,
@@ -73,19 +98,24 @@ and open the template in the editor.
   width: 100%;
 }
 
+.cgb_teaser-textwrap {
+  padding: .6em;
+  width: 60%;
+}
+
 @media only screen and (min-width: 600px) {
-  .cgb_teaser-teaser {
+  .cgb_teaser-teaser.cgb_teaser-float {
     width: 50%;
   }
   
-.col-md-8 .cgb_teaser-teaser {
+.col-md-8 .cgb_teaser-teaser.cgb_teaser-float {
   width: 50%;
 }
   
 }
 
 @media only screen and (min-width: 960px) {
-  .cgb_teaser-teaser {
+  .cgb_teaser-teaser.cgb_teaser-float {
     width: 33.33%;
   }
 }
@@ -115,6 +145,10 @@ and open the template in the editor.
 
 .cgb_teaser-innerwrap:hover {
   background-color: @cgb_teaser-bg_color_hover; 
+  
+  .cgb_teaser-image {
+    opacity: .5;
+  }
   
   .cgb_teaser-fader {
     background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, @cgb_teaser-bg_color_hover 80%, @cgb_teaser-bg_color_hover 100%);

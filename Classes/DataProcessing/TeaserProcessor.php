@@ -109,6 +109,7 @@ class TeaserProcessor implements DataProcessorInterface
                 $pages[] = [
                     'uid' => $page['uid'],
                     'teasertext' => $contentElements[0]['bodytext'],
+                    'header' => $contentElements[0]['header'],
                     'image' => $files['images'][0],
                 ];
             }
@@ -122,6 +123,7 @@ class TeaserProcessor implements DataProcessorInterface
             'flex' => $cObj->data['tx_cgbteaser_flex'],
             'mode' => $cObj->data['tx_cgbteaser_mode'],
             'height' => $cObj->data['tx_cgbteaser_height'],
+            'width' => $cObj->data['tx_cgbteaser_width'],
         ];
         return $processedData;
     }

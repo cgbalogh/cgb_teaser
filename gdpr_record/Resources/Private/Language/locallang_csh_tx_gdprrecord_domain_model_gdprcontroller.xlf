@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-29T14:33:29Z" product-name="gdpr_record">
+		<header/>
+		<body>
+			<trans-unit id="last_name.description">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="first_name.description">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="company.description">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="phone.description">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="type.description">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="joints.description">
+				<source>Joints</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

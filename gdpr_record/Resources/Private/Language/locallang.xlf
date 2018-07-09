@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-29T14:33:29Z" product-name="gdpr_record">
+		<header/>
+		<body>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller">
+				<source>Gdpr Controller</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller.company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller.joints">
+				<source>Joints</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprproject">
+				<source>Gdpr Project</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprproject.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprproject.controller">
+				<source>Controller</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprrecipient">
+				<source>Gdpr Recipient</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprrecipient.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller.type.1">
+				<source>Controller</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller.type.2">
+				<source>Joint Controller</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller.type.3">
+				<source>Subcontractor</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller.type.4">
+				<source>Data Protection Officer</source>
+			</trans-unit>
+			<trans-unit id="tx_gdprrecord_domain_model_gdprcontroller.type.5">
+				<source>Data Protection Expert</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

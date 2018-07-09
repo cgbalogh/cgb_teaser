@@ -1,0 +1,19 @@
+{
+    "name": "cgb/gdpr-record",
+    "type": "typo3-cms-extension",
+    "description": "Generate a record of processing (Verarbeitungsverzeichnis) according to gdpr based on the existing tables or by specifying the parameters manually.",
+    "authors": [
+        {
+            "name": "Christoph Balogh",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "CGB\\GdprRecord\\": "Classes"
+        }
+    }
+}
