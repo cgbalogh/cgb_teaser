@@ -88,7 +88,7 @@ $tmp_cgb_teaser_columns = [
             'type' => 'select',
             'renderType' => 'selectSingle',
             'items' => [
-                ['-- Select --', 0],
+                ['Automatic', 0],
                 ['100%', 100.00],
                 ['50%', 50.00],
                 ['33%', 33.33],
