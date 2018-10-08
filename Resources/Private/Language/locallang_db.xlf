@@ -12,6 +12,9 @@
 			<trans-unit id="tx_cgbteaser_domain_model_page.teaserimage">
 				<source>Teaserimage</source>
 			</trans-unit>
+			<trans-unit id="tx_cgbteaser_domain_model_page.teasertitle">
+				<source>Teaser Title</source>
+			</trans-unit>
 			<trans-unit id="tx_cgbteaser_domain_model_page.teasertext">
 				<source>Teasertext</source>
 			</trans-unit>

@@ -49,6 +49,16 @@ $tmp_cgb_teaser_columns = [
             $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
         ),
     ],
+    'tx_cgbteaser_teasertitle' => [
+        'exclude' => true,
+        'label' => 'LLL:EXT:cgb_teaser/Resources/Private/Language/locallang_db.xlf:tx_cgbteaser_domain_model_page.teasertitle',
+        'config' => [
+            'type' => 'input',
+            'size' => 50,
+            'eval' => 'trim',
+        ],
+        
+    ],
     'tx_cgbteaser_teasertext' => [
         'exclude' => true,
         'label' => 'LLL:EXT:cgb_teaser/Resources/Private/Language/locallang_db.xlf:tx_cgbteaser_domain_model_page.teasertext',
@@ -109,7 +119,7 @@ $tmp_cgb_teaser_columns = [
 // Make fields visible in the TCEforms:
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
   'pages', 
-  '--div--;Teaser,'.
+  '--div--;Teaser,tx_cgbteaser_teasertitle,'.
   '--palette--;LLL:EXT:cgb_teaser/Resources/Private/Language/locallang_db.xlf:tt_content.palette.override;tx_cgbteaser_overrides,'.
   '--palette--;LLL:EXT:cgb_teaser/Resources/Private/Language/locallang_db.xlf:tt_content.palette.mode;tx_cgbteaser_mode', 
   '1', // List of specific types to add the field list to. (If empty, all type entries are affected)

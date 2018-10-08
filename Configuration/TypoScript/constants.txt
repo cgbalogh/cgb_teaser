@@ -1,5 +1,14 @@
 
 plugin.cgb_teaser {
+	view {
+		# cat=plugin.tx_datatables_datatable/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:datatables/Resources/Private/Templates/
+		# cat=plugin.tx_datatables_datatable/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:datatables/Resources/Private/Partials/
+		# cat=plugin.tx_datatables_datatable/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:datatables/Resources/Private/Layouts/
+	}
+
     settings {
         less {
             # cat=cgb_teaser//a; type=string; label=Background color for teaser.

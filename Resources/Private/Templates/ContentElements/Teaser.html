@@ -1,86 +1,90 @@
-<f:variable name="teaserClass">
-  <f:if condition="{settings.flex} == 1">
-    <f:then>cgb_teaser-flex</f:then>
-    <f:else>cgb_teaser-float</f:else>
-  </f:if>
-</f:variable>
+<f:layout name="Default" />
+<f:section name="Main">          
 
-<f:variable name="additionalStyle">
-  <f:if condition="{settings.width} > 0">
-    <f:then>width: {settings.width}%;</f:then>
-    <f:else></f:else>  
-  </f:if>
-</f:variable>
+  <f:variable name="teaserClass">
+    <f:if condition="{settings.flex} == 1">
+      <f:then>cgb_teaser-flex</f:then>
+      <f:else>cgb_teaser-float</f:else>
+    </f:if>
+  </f:variable>
 
-<div class="cgb_teaser-wrap {teaserClass}">
-  <f:for each="{pages}" as="page" iteration="iterator">
-    
-    <f:variable name="targetPageLink"><f:uri.page pageUid="{page.uid}" /></f:variable>
-    
-    <div class="cgb_teaser-teaser {teaserClass}" style="{additionalStyle}">
-      <f:link.page pageUid="{page.uid}">
-        <f:variable name="additionalClass">
-          <f:if condition="{iterator.isFirst} && ({settings.height} == 2)">
-            <f:then>cgb_teaser-extend</f:then>
-            <f:else if="{settings.height} == 3">cgb_teaser-extend</f:else>
-            <f:else>cgb_teaser-normal</f:else>
-          </f:if>
-        </f:variable>
-        
-        <div class="cgb_teaser-teaser_{iterator.index}">
-          <div class="cgb_teaser-innerwrap {teaserClass} {additionalClass}">
-            
-            <f:if condition="{page.image.uid} > 0">
-              <f:then>
-                <div class="cgb_teaser-imagewrap">
-                  <f:image src="{page.image.uid}" treatIdAsReference="1" class="cgb_teaser-image" />
-                </div>
+  <f:variable name="additionalStyle">
+    <f:if condition="{settings.width} > 0">
+      <f:then>width: {settings.width}%;</f:then>
+      <f:else></f:else>  
+    </f:if>
+  </f:variable>
 
-                <div class="cgb_teaser-textwrap">
-                  <f:if condition="{page.header}">
-                    <h4 class="cgb_teaser-title">{page.header}</h4>
-                  </f:if>
+  <div class="cgb_teaser-wrap {teaserClass}">
+    <f:for each="{pages}" as="page" iteration="iterator">
 
-                  <p class="cgb_teaser-bodytext">
-                    <f:format.stripTags>{page.teasertext}</f:format.stripTags>
-                  </p>
-                  
-                  <div class="cgb_teaser-fader"></div>
+      <f:variable name="targetPageLink"><f:uri.page pageUid="{page.uid}" /></f:variable>
 
-                </div>
-              </f:then>
-              <f:else>
-                <div class="cgb_teaser-textwrap" style="width: 100%;">
-                  <f:if condition="{page.header}">
-                    <h4 class="cgb_teaser-title">{page.header}</h4>
-                  </f:if>
-
-                  <p class="cgb_teaser-bodytext">
-                    <f:format.stripTags>{page.teasertext}</f:format.stripTags>
-                  </p>
-                  <div class="cgb_teaser-fader"></div>
-                </div>
-              </f:else>
+      <div class="cgb_teaser-teaser {teaserClass}" style="{additionalStyle}">
+        <f:link.page pageUid="{page.uid}">
+          <f:variable name="additionalClass">
+            <f:if condition="{iterator.isFirst} && ({settings.height} == 2)">
+              <f:then>cgb_teaser-extend</f:then>
+              <f:else if="{settings.height} == 3">cgb_teaser-extend</f:else>
+              <f:else>cgb_teaser-normal</f:else>
             </f:if>
+          </f:variable>
 
-            <f:if condition="{targetPageLink} == ''">
-              <f:image src="EXT:cgb_teaser/Resources/Public/Icons/page_lock.png" class="cgb_teaser-pagelock" />
-            </f:if>
+          <div class="cgb_teaser-teaser_{iterator.index}">
+            <div class="cgb_teaser-innerwrap {teaserClass} {additionalClass}">
 
-            <f:if condition="1">
-              <f:image src="EXT:cgb_teaser/Resources/Public/Icons/video.png" class="cgb_teaser-type" />
-            </f:if>
-            
+              <f:if condition="{page.image.uid} > 0">
+                <f:then>
+                  <div class="cgb_teaser-imagewrap">
+                    <f:image src="{page.image.uid}" treatIdAsReference="1" class="cgb_teaser-image" />
+                  </div>
+
+                  <div class="cgb_teaser-textwrap">
+                    <f:if condition="{page.teasertitle}">
+                      <h4 class="cgb_teaser-title">{page.teasertitle}</h4>
+                    </f:if>
+
+                    <p class="cgb_teaser-bodytext">
+                      <f:format.stripTags>{page.teasertext}</f:format.stripTags>
+                    </p>
+
+                    <div class="cgb_teaser-fader"></div>
+
+                  </div>
+                </f:then>
+                <f:else>
+                  <div class="cgb_teaser-textwrap" style="width: 100%;">
+                    <f:if condition="{page.teasertitle}">
+                      <h4 class="cgb_teaser-title">{page.teasertitle}</h4>
+                    </f:if>
+
+                    <p class="cgb_teaser-bodytext">
+                      <f:format.stripTags>{page.teasertext}</f:format.stripTags>
+                    </p>
+                    <div class="cgb_teaser-fader"></div>
+                  </div>
+                </f:else>
+              </f:if>
+
+              <f:if condition="{targetPageLink} == ''">
+                <f:image src="EXT:cgb_teaser/Resources/Public/Icons/page_lock.png" class="cgb_teaser-pagelock" />
+              </f:if>
+
+              <f:if condition="1">
+                <f:image src="EXT:cgb_teaser/Resources/Public/Icons/video.png" class="cgb_teaser-type" />
+              </f:if>
+
+            </div>
           </div>
-        </div>
-      </f:link.page>
-      
-    </div>
-    <!-- {page.page.tx_cgbteaser_teasertype}
-    <f:image src="EXT:cgb_teaser/Resources/Public/Icons/movie.png" />
-    -->
-  </f:for>
-  <div style="clear: both"></div>
-</div>
+        </f:link.page>
+
+      </div>
+      <!-- {page.page.tx_cgbteaser_teasertype}
+      <f:image src="EXT:cgb_teaser/Resources/Public/Icons/movie.png" />
+      -->
+    </f:for>
+    <div style="clear: both"></div>
+  </div>
 
 
+</f:section>

@@ -4,6 +4,7 @@
 CREATE TABLE pages (
 
 	tx_cgbteaser_teaserimage int(11) unsigned NOT NULL default '0',
+	tx_cgbteaser_teasertitle varchar(255),
 	tx_cgbteaser_teasertext text,
 	tx_cgbteaser_textonly smallint(5) unsigned DEFAULT '0' NOT NULL,
 	tx_cgbteaser_teasertype int(11) DEFAULT '0' NOT NULL,

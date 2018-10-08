@@ -80,42 +80,33 @@ class TeaserProcessor implements DataProcessorInterface
             // it will be needed to pass the correct uid to the filesProcessor
             $tempCObj = clone $cObj;
 
+            // populat ethe pageDataArray element with bodytext and header either from first content element or from teaser override
+            $pageDataArray = [];
+            $pageDataArray['uid'] = $page['uid'];
+            $pageDataArray['teasertitle'] = $page['tx_cgbteaser_teasertitle'] ? $page['tx_cgbteaser_teasertitle'] : $contentElements[0]['header'];
+            $pageDataArray['teasertext'] = $page['tx_cgbteaser_teasertext'] ? $page['tx_cgbteaser_teasertext'] : $contentElements[0]['bodytext'];
+            
             // take first content element and fetch related images if there is anything to fetch
-            if ($page['tx_cgbteaser_teasertext']) {
+            if ($page['tx_cgbteaser_teaserimage']) {
                 $processorConfiguration['references.']['fieldName'] = 'tx_cgbteaser_teaserimage';
                 $processorConfiguration['references.']['table'] = 'pages';
                 $processorConfiguration['as'] = 'images';
 
                 $tempCObj->data = $page;
-                
                 $files = $this->filesProcessor->process( $tempCObj, $contentObjectConfiguration, $processorConfiguration, $page );
-                
-                $pages[] = [
-                    'uid' => $page['uid'],
-                    'teasertext' => $page['tx_cgbteaser_teasertext'],
-                    'image' => $files['images'][0],
-                ];
-                
             } elseif (is_array($contentElements[0])) {
                 $processorConfiguration['references.']['fieldName'] = 'image';
                 $processorConfiguration['references.']['table'] = 'tt_content';
                 $processorConfiguration['as'] = 'images';
 
                 $tempCObj->data = $contentElements[0];
-
                 $files = $this->filesProcessor->process( $tempCObj, $contentObjectConfiguration, $processorConfiguration, $contentElements[0] );
-                
-                // append to pages array array
-                $pages[] = [
-                    'uid' => $page['uid'],
-                    'teasertext' => $contentElements[0]['bodytext'],
-                    'header' => $contentElements[0]['header'],
-                    'image' => $files['images'][0],
-                ];
+                // print_r($files['images'][0]);
             }
+            $pageDataArray['image'] = $files['images'][0];
+            $pages[] = $pageDataArray;
         }
-
-       
+        
         $processedData['pages'] = $pages;
 
         // map the additional settings needed for correct rendering
@@ -125,6 +116,9 @@ class TeaserProcessor implements DataProcessorInterface
             'height' => $cObj->data['tx_cgbteaser_height'],
             'width' => $cObj->data['tx_cgbteaser_width'],
         ];
+
+        $processedData['cObj'] = $cObj->data;
+
         return $processedData;
     }
 }
